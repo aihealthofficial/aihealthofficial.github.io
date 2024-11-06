@@ -60,11 +60,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html"> About Us</a>
               </li>
-              <li class="nav-item-tryNow">
-                <a class="nav-link" href="http://localhost:5173/">Try Now</a>
-              </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item-tryNow">
+                <a class="nav-link" href="departments.html">Try Now</a>
               </li>
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
@@ -79,58 +79,54 @@
     <!-- end header section -->
   </div>
 
-  <!-- contact section -->
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container contact-form">
-            <!-- Web3Forms Integration -->
-            <form action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="2f859147-095a-45cd-bf62-e4fce5c1de22">
-              <div class="form-row">
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" name="name" placeholder="Your Name" required />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" name="phone" placeholder="Phone Number" />
-                  </div>
+<!-- contact section -->
+<section class="contact_section layout_padding contact_background">
+  <div class="container">
+    <div class="heading_container">
+      <h2>
+        Get In Touch
+      </h2>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form_container contact-form">
+          <!-- Web3Forms Integration -->
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="2f859147-095a-45cd-bf62-e4fce5c1de22">
+            <div class="form-row">
+              <div class="col-lg-6">
+                <div>
+                  <input type="text" name="name" placeholder="Your Name" required />
                 </div>
               </div>
-              <div>
-                <input type="email" name="email" placeholder="Email" required />
+              <div class="col-lg-6">
+                <div>
+                  <input type="text" name="phone" placeholder="Phone Number" />
+                </div>
               </div>
-              <div>
-                <textarea name="message" class="message-box" placeholder="Message" required></textarea>
-              </div>
-              <div class="btn_box">
-                <button type="submit">
-                  SEND
-                </button>
-              </div>
-            </form>
-            <!-- End Web3Forms Integration -->
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
             </div>
-          </div>
+            <div>
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div>
+              <textarea name="message" class="message-box" placeholder="Message" required></textarea>
+            </div>
+            <div class="btn_box">
+              <button type="submit">
+                SEND
+              </button>
+            </div>
+          </form>
+          <!-- End Web3Forms Integration -->
         </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Optional: Add other content here -->
       </div>
     </div>
-  </section>
-  <!-- end contact section -->
+  </div>
+</section>
+<!-- end contact section -->
 
    <!-- footer section -->
    <footer class="footer_section">
@@ -145,13 +141,7 @@
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
+                  Oakville, Ontario, Canada
                 </span>
               </a>
               <a href="https://mail.google.com/mail/u/0/#inbox">
@@ -198,6 +188,9 @@
               </a>
               <a class="" href="about.html">
                 About
+              </a>
+              <a class="" href="departments.html">
+                Try Now
               </a>
               <a class="" href="contact.html">
                 Contact Us
