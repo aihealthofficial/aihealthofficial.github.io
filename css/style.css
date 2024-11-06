@@ -138,7 +138,7 @@ a:focus {
 
 .sub_page .hero_area {   /* Navigation area background */
   min-height: auto;
-  background-color: #3bb2f27c;
+  background: linear-gradient(to right, #79c6f3, #52b2eaad);
 }
 
 .sub_page .hero_area .hero_bg_box {
@@ -437,10 +437,24 @@ a:focus {
   height: 20px;
 }
 
+/* department section */
+
 .department_section {
   position: relative;
-  background: linear-gradient(#ffffff, #d3f3fe);
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
 }
+
+.under-development-background {
+  background-image: url("images/under-development.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
 
 .department_section .box {
   display: -webkit-box;
@@ -523,7 +537,134 @@ a:focus {
   color: #6275d2;
 }
 
+/* comign soon */
+.department_section {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
 
+.under-development-background {
+  background: linear-gradient(to right, #0f0b42 ,#000000, #0f0b42);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; /* Use 100vh for full viewport height */
+}
+
+.coming-soon-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers both horizontally and vertically */
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.update-soon-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  text-align: center; /* Ensures the text remains centered */
+  max-width: 90%; /* Adjusts for better readability on smaller screens */
+}
+
+.construction-icon {
+  position: absolute;
+  bottom: 30%; /* Adjust based on your design */
+  left: 50%;
+  transform: translateX(-50%); /* Centers the image horizontally */
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  z-index: 2; /* Ensures it is above the background */
+}
+
+/* For smaller screens */
+
+
+@media (max-width: 1366px) {
+
+  .construction-icon {
+    width: 140px; /* Smaller size for mobile */
+    top: 45%;
+  }
+
+  .coming-soon-text {
+    font-size: 3.7rem; /* Smaller font size for mobile */
+    top: 25%; /* Adjust top position */
+  }
+
+  .update-soon-text {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    top: 35%; /* Adjust top position */
+  }
+}
+
+@media (max-width: 768px) {
+  .coming-soon-text {
+    font-size: 3rem; /* Smaller font size for mobile */
+    top: 25%; /* Adjust top position */
+  }
+
+  .update-soon-text {
+    font-size: 1.1rem; /* Smaller font size for mobile */
+    top: 40%; /* Adjust top position */
+  }
+
+  .construction-icon {
+    width: 140px; /* Smaller size for mobile */
+    top: 50%;
+  }
+}
+
+@media (max-width: 720px) {
+  .coming-soon-text {
+    font-size: 2.2rem; /* Smaller font size for mobile */
+    top: 25%; /* Adjust top position */
+  }
+
+  .update-soon-text {
+    font-size: 1rem; /* Smaller font size for mobile */
+    top: 40%; /* Adjust top position */
+  }
+
+  .construction-icon {
+    width: 140px; /* Smaller size for mobile */
+    top: 50%;
+  }
+}
+
+
+/* For extra small screens */
+@media (max-width: 480px) {
+  .coming-soon-text {
+    font-size: 1.6rem; /* Further reduce font size */
+    top: 20%; /* Adjust top position */
+  }
+
+  .update-soon-text {
+    font-size: 1rem; /* Further reduce font size */
+    top: 35%; /* Adjust top position */
+  }
+
+  .construction-icon {
+    width: 100px; /* Even smaller size for extra small screens */
+    top: 45%;
+  }
+}
 
 
 
@@ -695,9 +836,52 @@ a:focus {
 }
 
 /* contact section */
+
+
+
+.contact_background {
+  background-image: url('../images/job503-wit-051.jpg'); /* Adjust the path based on your file structure */
+  background-size: cover; /* Adjusts the background to cover the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background from repeating */
+  padding: 60px 0; /* Adjust padding as needed */
+  color: #ffffff; /* Optional: Change text color for better contrast */
+}
+
+.contact_background .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.contact_background {
+  background-color: #333; /* Fallback color */
+  /* Existing background properties */
+}
+ 
+
+@media (max-width: 768px) {
+  .contact_background {
+    background-position: top;
+    padding: 40px 0;
+  }
+}
+
+
+.contact_background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(35, 145, 249, 0.196); /* Optional: Adds an overlay for better text readability */
+  z-index: 1;
+}
+
 .contact_section {
   position: relative;
-  background-color: #e6e6e67c;
+  background-color: #f5f5f57c;
 }
 
 .contact_section .heading_container {
