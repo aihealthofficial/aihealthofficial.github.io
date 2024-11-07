@@ -444,6 +444,7 @@ a:focus {
   width: 100vw;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
+  background: #f9f9f9;
 }
 
 .under-development-background {
