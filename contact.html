@@ -11,9 +11,9 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/android-chrome-512x512.png" type="">
+  <link rel="shortcut icon" href="images/trimmy_1733360881-trimmy-redesigned_processed.png" type="">
 
-  <title> AIHealth </title>
+  <title> AIHEALTH </title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -32,6 +32,7 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+
 </head>
 
 <body class="sub_page">
@@ -41,10 +42,10 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="./">
+          <a class="navbar-brand" href="index.html">
             <span class="logo">
-              <img src="images/AIHealth2.png" alt="">
-              AIHEALTH
+              <img src="images/new-white-aihealth-logo.png" alt="">
+              AIHealth
             </span>
           </a>
 
@@ -53,25 +54,23 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav center-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./about"> About Us</a>
+                <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact">Contact Us</a>
+                <a class="nav-link" href="careers.html">Careers</a>
               </li>
-              <li class="nav-item-tryNow">
-                <a class="nav-link" href="./departments">Try Now</a>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </form>
             </ul>
+            <div class="nav-item-tryNow">
+              <a class="nav-link" href="departments.html">Our Tools</a>
+            </div>
           </div>
         </nav>
       </div>
@@ -79,134 +78,107 @@
     <!-- end header section -->
   </div>
 
-<!-- contact section -->
-<section class="contact_section layout_padding contact_background">
-  <div class="container">
-    <div class="heading_container">
-      <h2>
-        Get In Touch
-      </h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form_container contact-form">
-          <!-- Web3Forms Integration -->
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="2f859147-095a-45cd-bf62-e4fce5c1de22">
-            <div class="form-row">
-              <div class="col-lg-6">
-                <div>
-                  <input type="text" name="name" placeholder="Your Name" required />
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding contact_background">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Get In Touch
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container contact-form">
+            <!-- Web3Forms Integration -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="2f859147-095a-45cd-bf62-e4fce5c1de22">
+              <div class="form-row">
+                <div class="col-lg-6">
+                  <div>
+                    <input type="text" name="name" placeholder="Your Name" required />
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div>
+                    <input type="text" name="phone" placeholder="Phone Number" />
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div>
-                  <input type="text" name="phone" placeholder="Phone Number" />
-                </div>
+              <div>
+                <input type="email" name="email" placeholder="Email" required />
               </div>
-            </div>
-            <div>
-              <input type="email" name="email" placeholder="Email" required />
-            </div>
-            <div>
-              <textarea name="message" class="message-box" placeholder="Message" required></textarea>
-            </div>
-            <div class="btn_box">
-              <button type="submit">
-                SEND
-              </button>
-            </div>
-          </form>
-          <!-- End Web3Forms Integration -->
+              <div>
+                <textarea name="message" class="message-box" placeholder="Message" required></textarea>
+              </div>
+              <div class="btn_box">
+                <button type="submit">
+                  Send
+                </button>
+              </div>
+            </form>
+            <!-- End Web3Forms Integration -->
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <!-- Lottie Animation Model -->
+          <dotlottie-player 
+            src="https://lottie.host/d3aa441e-07ec-4bf3-8181-fd4293248591/NEaj3iH8aP.lottie" 
+            background="transparent" 
+            speed="1" 
+            style="width: 400px; height: 400px" 
+            loop 
+            autoplay>
+          </dotlottie-player>
         </div>
       </div>
-      <div class="col-md-6">
-        <!-- Optional: Add other content here -->
+    </div>
+  </section>
+  <!-- end contact section -->
+  
+
+   <!-- Footer Section -->
+<footer class="footer_section">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Logo and Title Section -->
+      <div class="col-lg-4 d-flex align-items-center">
+        <img src="../images/redesigned_processed_enhanced.png" 
+             alt="AI HEALTH Logo" class="footer_logo">
+        <h4 class="footer_company_title">AIHealth</h4>
       </div>
+
+      <!-- Navigation Links -->
+      <div class="col-lg-4 text-center">
+        <nav class="footer_nav">
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="about.html">About Us</a>
+          <a href="departments.html">Our Tools</a>
+        </nav>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="col-lg-4 text-right">
+        <div class="footer_social_icons">
+          <a href="https://www.instagram.com/aihealth_officials/" target="_blank"><i class="fa fa-instagram"></i></a>
+          <a href="https://x.com/AIHealth_inc" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.youtube.com/@AIHealth_Officials" target="_blank"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Links -->
+    <div class="footer_policy text-center">
+      <p>&copy; 2024 AI HEALTH All rights reserved.</p>
+      <nav>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-conditions.html">Terms and Conditions</a>
+      </nav>
     </div>
   </div>
-</section>
-<!-- end contact section -->
-
-   <!-- footer section -->
-   <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="https://www.google.ca/maps/place/Oakville,+ON/@43.4480774,-79.7891927,11z/data=!3m1!4b1!4m6!3m5!1s0x882b5b8b8f729979:0x5037b28c7231bd0!8m2!3d43.467517!4d-79.6876659!16zL20vMDE4bGR3?entry=ttu&g_ep=EgoyMDI0MTEwNS4wIKXMDSoASAFQAw%3D%3D">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Oakville, Ontario, Canada
-                </span>
-              </a>
-              <a href="https://mail.google.com/mail/u/0/#inbox">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  aihealthofficials@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
-              About
-            </h4>
-            <p>
-              Bridging the gap between AI and healthcare to empower individuals with deeper insights into their well-being, enabling them to make informed decisions and develop innovative solutions for improving their health.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="active" href="./">
-                Home
-              </a>
-              <a class="" href="./about">
-                About
-              </a>
-              <a class="" href="./contact">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-info">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="">AIHEALTH<br></a>
-
-        </p>
-       
-      </div>  
-    </div>
-  </footer>
-  <!-- footer section -->
+</footer>
 
 
   <!-- jQery -->
