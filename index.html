@@ -110,7 +110,7 @@
           <div class="btn-box animate fadeInUp">
             <a href="#welcome-section" class="btn btn-primary">Learn More</a>
             <a href="https://www.youtube.com/watch?v=JOAe9hj22Gw" target="_blank" class="youtube-button">
-              New App! <span class="play-icon">▶</span>
+              New App! <i class='bx bx-play-circle' ></i>
             </a>
           </div>
         </div>
@@ -120,73 +120,67 @@
 </section>
 
 <style>
-  /* General Styles */
-  .btn-box {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center; /* Centers the buttons horizontally */
-    gap: 15px; /* Adds space between the buttons */
-  }
 
-  .btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 30px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-    color: white;
-    background: linear-gradient(to left, #91b8f7, #469bf6);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
+  /* Button Container */
+/* Button Container */
+.btn-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 15px; /* Space between the buttons */
+}
 
-  .btn:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-    color: #ffffff;
-  }
+/* General Button Styles */
+.btn,
+.youtube-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  color: white;
+  background: linear-gradient(to right, #91b8f7, #469bf6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .youtube-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 35px;
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
-    background: linear-gradient(to right, #91b8f7, #469bf6);
-    border-radius: 30px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-  }
+.btn:hover,
+.youtube-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+}
 
-  .youtube-button:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px);
-    color: #ffffff;
-  }
+/* Icon Adjustments */
+.youtube-button i {
+  margin-left: 8px;
+  font-size: 18px;
+}
 
-  .play-icon {
-    margin-left: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-/* Media Query for Smaller Screens */
+/* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .btn-box {
-    flex-direction: row; /* Stacks the buttons vertically */
-    align-items: center; /* Ensures buttons are centered */
-    gap: 10px; /* Adjust spacing for stacked buttons */
+    flex-direction: row; /* Keep buttons aligned horizontally */
+    justify-content: center; /* Horizontally centered */
+    gap: 10px; /* Reduced gap for smaller screens */
   }
 
-  .btn, .youtube-button {
-    width: auto; /* Adjust width to fit content */
-    padding: 8px 35px; /* Smaller padding for smaller buttons */
-    font-size: 14px; /* Reduce font size for smaller screens */
-    text-align: center; /* Center the button text */
-    margin: 5px 0; /* Add vertical spacing between buttons */
+  .btn,
+  .youtube-button {
+    padding: 6px 15px; /* Smaller padding */
+    font-size: 14px; /* Reduce font size */
+    border-radius: 15px; /* Slightly less rounded for smaller screens */
+  }
+
+  .youtube-button i {
+    margin-left: 6px; /* Adjust icon spacing */
+    font-size: 16px; /* Slightly smaller icon size */
   }
 }
+
 
 </style>
 
