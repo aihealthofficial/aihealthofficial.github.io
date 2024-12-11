@@ -150,6 +150,7 @@ a:focus {
   padding: 15px 0;
 }
 
+
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
@@ -232,6 +233,7 @@ a:focus {
   overflow: hidden;
   animation: pulseEffect 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /* Try Now button hover effect */
 .custom_nav-container .nav-item-tryNow .nav-link:hover {
@@ -709,55 +711,56 @@ h2 #blama {
 /* Media Query for Small Screens (up to 768px) */
 @media (max-width: 768px) {
   .department_section {
-    padding: 40px 20px; /* Reduce padding for smaller screens */
+    padding: 30px 15px; /* Further reduced padding for smaller screens */
   }
 
   .features_row {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid for smaller columns */
-    gap: 15px; /* Reduce gap between boxes */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller columns */
+    gap: 10px; /* Reduced gap between boxes */
   }
 
   .feature_box {
-    padding: 15px; /* Compact the box padding */
-    margin-top: 20px; /* Adjust vertical spacing */
-    margin-left: 0; /* Remove left margin to maintain grid alignment */
+    padding: 10px; /* More compact box padding */
+    margin-top: 15px; /* Reduced vertical spacing */
+    margin-left: 0; /* Maintain alignment */
   }
 
   .heading_container h2 {
-    font-size: 28px; /* Adjust heading size */
+    font-size: 24px; /* Slightly smaller heading size */
   }
 
   .heading_container p {
-    font-size: 14px; /* Slightly smaller text for description */
+    font-size: 12px; /* Smaller text for description */
   }
 }
 
 /* Media Query for Very Small Screens (up to 480px) */
 @media (max-width: 480px) {
   .department_section {
-    padding: 20px 15px; /* Further reduce padding for compactness */
+    padding: 15px 10px; /* Further compact padding */
   }
 
   .features_row {
-    grid-template-columns: 1fr; /* Single column layout for very small screens */
-    gap: 10px; /* Smaller gaps between boxes */
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 5px; /* Tighter gaps between boxes */
   }
 
   .feature_box {
     width: 100%; /* Full width for boxes */
-    margin-top: 15px;
-    margin-left: 0; /* No left margin for a cleaner look */
-    padding: 10px; /* Reduce padding for a tighter fit */
+    margin-top: 10px; /* Adjust vertical spacing */
+    margin-left: 0; /* No left margin */
+    padding: 8px; /* Minimal padding for a tight fit */
   }
 
   .heading_container h2 {
-    font-size: 24px; /* Scale down heading for small screens */
+    font-size: 20px; /* Smaller heading size */
   }
 
   .heading_container p {
-    font-size: 12px; /* Adjust font size for better readability */
+    font-size: 10px; /* Reduced font size for readability */
   }
 }
+
 
 
 
@@ -1819,6 +1822,74 @@ h2 #blama {
   transform: scale(1.1);
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .careers_section {
+    padding: 30px 0;
+  }
+
+  .careers_section .img-box img {
+    padding: 3px;
+    margin: 3px;
+  }
+
+  .careers_section .detail-box {
+    padding: 15px 20px;
+  }
+
+  .careers_section .heading_container h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .careers_section p {
+    font-size: 14px;
+  }
+
+  .careers_section ul li {
+    font-size: 14px;
+  }
+
+  .careers_section .read_more_btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers_section {
+    padding: 20px 0;
+  }
+
+  .careers_section .img-box img {
+    padding: 2px;
+    margin: 2px;
+  }
+
+  .careers_section .detail-box {
+    padding: 10px 15px;
+  }
+
+  .careers_section .heading_container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .careers_section p {
+    font-size: 12px;
+  }
+
+  .careers_section ul li {
+    font-size: 12px;
+  }
+
+  .careers_section .read_more_btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+}
+
+
 /* Job Openings Section */
 .job_openings_section {
   padding-top: 40px;
@@ -1911,6 +1982,91 @@ h2 #blama {
   color: #0056b3;
   text-decoration: none;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job_openings_section {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .job_openings_section .heading_container_blumb h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .job_card {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+
+  .job_card h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .job_card p {
+    font-size: 14px;
+  }
+
+  .job_card ul li {
+    font-size: 12px;
+  }
+
+  .apply_btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .apply_cta {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .job_openings_section {
+    padding: 5px;
+    margin-top: 15px;
+  }
+
+  .job_openings_section .heading_container_blumb h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .job_card {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .job_card h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .job_card p {
+    font-size: 12px;
+  }
+
+  .job_card ul li {
+    font-size: 10px;
+  }
+
+  .apply_btn {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .apply_cta {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
 
 /* Animations */
 @keyframes fadeIn {
@@ -2171,43 +2327,45 @@ h2 {
 
 /* FAQ SECTION */
 
+/* FAQ SECTION */
+
 .faq-section {
   text-align: center;
-  padding: 50px 20px;
+  padding: 30px 10px; /* Reduced padding */
   background-color: #fcfcfc;
   border-top: 2px solid #000000;
   border-top-style: double;
-  width: 90%; /* Adjust the percentage as desired */
-  margin: 0 auto; /* Center the section with smaller width */
+  width: 95%; /* Slightly wider for smaller screens */
+  margin: 0 auto;
 }
 
 .faq-section .container {
-  max-width: 800px;
+  max-width: 700px; /* Reduced max width */
   margin: 0 auto;
   background: linear-gradient(#e4f5ff, #b1f1f7);
-  border-radius: 30px;
-  padding: 40px;
+  border-radius: 20px; /* Smaller border radius */
+  padding: 30px; /* Reduced padding */
 }
 
 .faq-section h2 {
-  font-size: 28px;
+  font-size: 24px; /* Smaller font size */
   font-weight: bold;
   color: #2c3e50;
 }
 
 .faq-section p {
-  font-size: 16px;
+  font-size: 14px; /* Smaller font size */
   color: #484848;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Reduced margin */
   text-wrap: balance;
 }
 
 .faq-item {
   background-color: #ffffff;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px; /* Smaller border radius */
+  padding: 10px 15px; /* Reduced padding */
+  margin-bottom: 10px; /* Reduced margin */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow */
   cursor: pointer;
 }
 
@@ -2216,22 +2374,28 @@ h2 {
   align-items: center;
   justify-content: space-between;
 }
-
 .faq-question .icon {
-  font-size: 24px;
+  font-size: 20px; /* Smaller icon size */
   background-color: transparent;
   color: #437dfa;
-  width: 40px;
-  height: 40px;
+  width: 35px; /* Reduced size */
+  height: 35px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
+  margin-right: 10px; /* Reduced margin */
+}
+
+.faq-question .icon img {
+  width: 25px; /* Match icon size */
+  height: 25px; /* Match icon size */
+  opacity: 0.5;
+
 }
 
 .faq-question h3 {
-  font-size: 18px;
+  font-size: 16px; /* Smaller font size */
   font-weight: bold;
   color: #2c3e50;
   margin: 0;
@@ -2240,7 +2404,7 @@ h2 {
 }
 
 .faq-question .bx.bxs-chevron-down {
-  font-size: 18px;
+  font-size: 16px; /* Smaller font size */
   color: #2c3e50;
   transition: transform 0.3s;
 }
@@ -2250,11 +2414,11 @@ h2 {
 }
 
 .faq-answer {
-  font-size: 14px;
+  font-size: 12px; /* Smaller font size */
   color: #7f8c8d;
-  margin-top: 10px;
+  margin-top: 8px; /* Reduced margin */
   display: none;
-  line-height: 1.6;
+  line-height: 1.4; /* Slightly tighter line-height */
 }
 
 .faq-item.active .faq-answer {
@@ -2263,16 +2427,28 @@ h2 {
 
 /* Responsiveness */
 @media (max-width: 768px) {
+  .faq-section {
+    padding: 20px 5px; /* Further reduced padding */
+  }
+
   .faq-section h2 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Smaller font size */
   }
 
   .faq-section p {
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Smaller font size */
   }
 
   .faq-question h3 {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .faq-section .container {
+    padding: 20px; /* Further reduced padding */
+  }
+
+  .faq-item {
+    padding: 8px 10px; /* Further reduced padding */
   }
 }
 
