@@ -875,7 +875,7 @@ h2 #blama {
 
 
 .vision_section .ourvisionbackground {
-  background: linear-gradient(to right, #d6f1ff47, #2cfe9947);
+  background-color: #d6f1ff47;
   padding: 10px;
   border-radius: 20px;
   border: #d6f1ff 5px solid;
