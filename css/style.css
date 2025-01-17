@@ -151,6 +151,7 @@ a:focus {
 }
 
 
+
 .header_section .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
@@ -159,6 +160,7 @@ a:focus {
 .logo img {
   width: 80px; /* Adjust this size as needed */
   height: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
 }
 
 .logo {
