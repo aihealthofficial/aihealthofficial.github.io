@@ -556,6 +556,7 @@ h2 #blama {
 }
 
 
+
 /* Department Section Styling */
 .department_section {
   padding: 60px 0;
@@ -571,38 +572,47 @@ h2 #blama {
   margin-bottom: 20px;
 }
 
-.features_row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  padding-top: 20px;
+/* Features Wrapper to enable horizontal scroll */
+.features_wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
+/* Features Scroller for infinite scrolling */
+.features_scroller {
+  display: flex;
+  width: max-content; /* Allow the scroller to expand based on content */
+  animation: scroll 20s linear infinite;
+}
+
+/* Features Row with duplicated content for smooth scrolling */
+.features_row {
+  display: flex;
+  gap: 20px; /* Add gap between feature boxes */
+  flex-shrink: 0;
+  padding: 0 10px; /* Add padding to prevent edge overlap */
+}
+
+/* Add a gap between the original and duplicated rows */
+.features_row + .features_row {
+  margin-left: 20px; /* Add gap between the two rows */
+}
+
+/* Individual Feature Box */
 .feature_box {
+  flex: 0 0 280px; /* Fixed width for each feature box */
   background: #ffffff;
   border-radius: 20px;
   border: 5px solid #bbf3fa;
   padding: 20px;
   text-align: center;
   position: relative;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-in-out forwards;
 }
 
-.feature_circle {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(#3ebdf8,#69efb3);
-  border-radius: 50%;
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
+
+/* Feature Box Headings */
 .feature_box h3 {
   font-size: 22px;
   font-weight: bold;
@@ -610,6 +620,7 @@ h2 #blama {
   margin-bottom: 10px;
 }
 
+/* Feature List */
 .feature_box ul {
   list-style-type: disc;
   text-align: left;
@@ -620,6 +631,81 @@ h2 #blama {
   font-size: 14px;
   color: #555;
   margin-bottom: 10px;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 10px)); /* Move by 50% + half the gap */
+  }
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .feature_box {
+    flex: 0 0 240px; /* Reduce the width of feature boxes */
+  }
+
+  .features_row {
+    gap: 15px; /* Reduce the gap between feature boxes */
+  }
+
+  .features_row + .features_row {
+    margin-left: 15px; /* Reduce the gap between rows */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .feature_box {
+    flex: 0 0 200px; /* Further reduce the width of feature boxes */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .features_row {
+    gap: 10px; /* Further reduce the gap between feature boxes */
+  }
+
+  .features_row + .features_row {
+    margin-left: 10px; /* Further reduce the gap between rows */
+  }
+
+  .feature_box h3 {
+    font-size: 18px; /* Reduce heading font size */
+  }
+
+  .feature_box ul li {
+    font-size: 12px; /* Reduce list item font size */
+  }
+}
+
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  .feature_box {
+    flex: 0 0 160px; /* Further reduce the width of feature boxes */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .features_row {
+    gap: 8px; /* Further reduce the gap between feature boxes */
+  }
+
+  .features_row + .features_row {
+    margin-left: 8px; /* Further reduce the gap between rows */
+  }
+
+  .feature_box h3 {
+    font-size: 16px; /* Further reduce heading font size */
+  }
+
+  .feature_box ul li {
+    font-size: 10px; /* Further reduce list item font size */
+  }
 }
 
 
@@ -785,6 +871,77 @@ h2 #blama {
   border-radius: 5px; /* Optional: slightly round corners */
   transition: all 0.8s ease-in-out;
 }
+
+
+
+.meet-team-btn {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.meet-team-btn a {
+  display: inline-flex; /* Aligns icon, image, text */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a4a4a; /* Soft text color for readability */
+  background: linear-gradient(135deg, #f0f8ff, #dbe4ff); /* Very light gradient */
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.meet-team-btn a:hover {
+  transform: translateY(-3px); /* Slight upward movement */
+  box-shadow: 0 6px 14px rgba(0, 119, 255, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Button icon (small circular image) */
+.meet-team-btn .button-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Arrow icon */
+.meet-team-btn .button-arrow {
+  font-size: 22px;
+  color: #4a4a4a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .meet-team-btn a {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .meet-team-btn .button-arrow {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meet-team-btn {
+    text-align: left;
+  }
+  .meet-team-btn a {
+    width: 100%;
+    text-align: center;
+  }
+  .meet-team-btn .button-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .meet-team-btn .button-arrow {
+    font-size: 18px;
+  }
+}
+
+
 
 /* Hide the square on smaller screens */
 @media (max-width: 768px) {
@@ -2453,3 +2610,147 @@ h2 {
 }
 
 
+
+/* Meet the Team */
+
+
+/* Team Section Styles */
+.team-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.team-section .team-intro {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.team-member {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(4, 148, 244, 0.2);
+}
+
+/* Team Member Image with Transparent Gradient Border */
+.team-member-img-wrapper {
+  display: inline-block;
+  padding: 5px; /* Controls the border thickness */
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a4f5bb, #1d7cf8); /* Gradient border */
+  position: relative;
+}
+
+/* Inner image with a transparent background */
+.team-member-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background-color: transparent; /* Ensures the background remains transparent */
+  border: 4px solid transparent; /* Transparent border to allow gradient */
+  box-sizing: border-box; /* Ensures the border is included in the element's dimensions */
+}
+
+.team-member-name {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.team-member-role {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.team-member-quote {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-section {
+      padding: 2rem 1rem;
+  }
+
+  .team-section h2 {
+      font-size: 2rem;
+  }
+
+  .team-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+  }
+
+  .team-member {
+      padding: 1rem;
+  }
+
+  .team-member-img {
+      width: 150px; /* Adjusted for smaller screens */
+      height: 150px; /* Adjusted for smaller screens */
+  }
+
+  .team-member-name {
+      font-size: 1.2rem;
+  }
+
+  .team-member-role {
+      font-size: 0.9rem;
+  }
+
+  .team-member-quote {
+      font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .team-member {
+      max-width: 300px;
+      margin: 0 auto;
+  }
+
+  .team-member-img {
+      width: 140px; /* Adjusted for mobile */
+      height: 140px; /* Adjusted for mobile */
+  }
+}
+
+/* end */
